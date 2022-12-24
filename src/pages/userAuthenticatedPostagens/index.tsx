@@ -4,7 +4,7 @@ import styles from './Postagens.module.css';
 import { useRouter } from 'next/router'
 import Router from 'next/router'
 import { toast } from 'react-toastify'
-import { apiPostagens } from '../../services/apiPostagens';
+import { apiPostagens } from '../../services/apiClient';
 
 
 export default function UserAuthenticatedPostagens() {

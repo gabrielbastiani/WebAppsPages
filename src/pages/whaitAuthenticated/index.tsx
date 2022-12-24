@@ -1,6 +1,7 @@
+import { canSSRGuest } from '../../utils/canSSRGuest'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from './Whait.module.css'
+import styles from '../whaitAuthenticated/styles.module.scss'
 import logoLoginImg from '../../../public/LogoBuilderBlack.png'
 
 
@@ -9,7 +10,7 @@ export default function WhaitAuthenticated(){
    return(
       <>
       <Head>
-         <title>Builder Seu Negócio Online</title>
+         <title>Blog Builder Seu Negócio Online</title>
       </Head>
       <div className={styles.containerCenter}>
          <Image src={logoLoginImg} width={440} height={150} alt="Logo Builder Seu Negocio Online" />
@@ -23,3 +24,9 @@ export default function WhaitAuthenticated(){
       </>
    )
 }
+
+export const getServerSideProps = canSSRGuest(async (ctx) => {
+   return {
+     props: {}
+   }
+ })

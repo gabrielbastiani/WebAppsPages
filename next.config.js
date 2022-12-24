@@ -9,11 +9,11 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    domains: ['apipostagem.builderseunegocioonline.com.br'],
+    domains: ['apiblog.builderseunegocioonline.com.br'],
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'apipostagem.builderseunegocioonline.com.br',
+        hostname: 'apiblog.builderseunegocioonline.com.br',
         port: '',
         pathname: '/files/**',
       },
