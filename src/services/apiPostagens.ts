@@ -8,7 +8,8 @@ export function setupAPIClient(ctx = undefined){
   let cookies = parseCookies(ctx);
 
   const api = axios.create({
-    baseURL: 'https://apipostagem.builderseunegocioonline.com.br' || 'http://localhost:3000',
+    //baseURL: 'https://apipostagens.builderseunegocioonline.com.br',
+    baseURL: 'http://localhost:3333',
     headers: {
       Authorization: `Bearer ${cookies['@blogbuilder.token']}`
     }

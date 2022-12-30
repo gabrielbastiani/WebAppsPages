@@ -38,17 +38,17 @@ export default function Recover() {
 
          const apiClient = setupAPIClient()
 
-         await apiClient.put(`/recover?recovery_id=${recovery_id}`, { password })
+         await apiClient.put(`/recoverPassword?recovery_id=${recovery_id}`, { password })
 
          toast.success('Senha atualizada com sucesso.')
+
+         Router.push('/recoverSuccess')
 
 
       } catch (err) {
          console.log(err);
          toast.error('Erro ao atualizar a sua senha')
       }
-
-      Router.push('/login')
 
    }
 
@@ -85,23 +85,8 @@ export default function Recover() {
                   </Button>
 
                </form>
-
-               <Link href="/signup">
-                  <a className={styles.text}>Não possui uma conta? Cadastre-se</a>
-               </Link>
-
-               <Link href="/">
-                  <a className={styles.text}>Ir para o Blog</a>
-               </Link>
-
             </div>
          </div>
       </>
    )
 }
-
-export const getServerSideProps = canSSRGuest(async (ctx) => {
-   return {
-      props: {}
-   }
-})
