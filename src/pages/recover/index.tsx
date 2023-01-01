@@ -42,13 +42,12 @@ export default function Recover() {
 
          toast.success('Senha atualizada com sucesso.')
 
-         Router.push('/recoverSuccess')
-
-
       } catch (err) {
          console.log(err);
          toast.error('Erro ao atualizar a sua senha')
       }
+
+      Router.push('/recoverSuccess')
 
    }
 
